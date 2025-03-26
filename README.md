@@ -1,5 +1,16 @@
 # ML-Project
 
+Project Type	Predictive Analytics
+Project Topic	Energy Consumption Analysis
+Project Objective	Predict whether a household is a high energy user.
+Supervised Or Unsupervised ML Approach?	Supervised
+Dataset Link	https://github.com/SayanDesarkar2001/Dataset-on-Energy.git
+
+Number of Rows	10,000
+Number of Columns	15
+Target Variable (If supervised)	target_high_usage (True/False)
+
+
 Introduction to the Dataset
 The Energy_dataset.csv contains data related to energy consumption and various 
 factors affecting it. The dataset includes the following columns:
@@ -16,4 +27,6 @@ factors affecting it. The dataset includes the following columns:
 11. annual_energy_trend: Annual trend in energy consumption.
 12. solar_panel: Whether solar panels are installed.
 13.target_high_usage: Whether the customer is targeted for high usage
+
+
 
