@@ -2,12 +2,13 @@
 
 
 
-Project Type
-
+Project Type :
 Predictive Analytics
-Project Topic	
+
+Project Topic	:
 Energy Consumption Analysis
-Project Objective
+
+Project Objective:
 Predict whether a household is a high energy user.
 
 Supervised Or Unsupervised ML Approach?	Supervised
