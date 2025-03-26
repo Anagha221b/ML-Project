@@ -1,9 +1,14 @@
-# ML-Project
+# Energy Consumption Analysis using Predictive Analytics
 
-Project Type	Predictive Analytics
-Project Topic	Energy Consumption Analysis
-Project Objective	Predict whether a household is a high energy user.
+Project Type
+Predictive Analytics
+Project Topic	
+Energy Consumption Analysis
+Project Objective
+Predict whether a household is a high energy user.
+
 Supervised Or Unsupervised ML Approach?	Supervised
+
 Dataset Link	https://github.com/SayanDesarkar2001/Dataset-on-Energy.git
 
 Number of Rows	10,000
