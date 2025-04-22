@@ -1,41 +1,38 @@
 # Energy Consumption Analysis using Predictive Analytics
 
 
+Columns and their description:
 
-Project Type :
-Predictive Analytics
+customer_id: Unique identifier for each customer.
 
-Project Topic	:
-Energy Consumption Analysis
+region: Geographic region of the customer.
 
-Project Objective:
-Predict whether a household is a high energy user.
+energy_consumption_kwh: Total energy consumption in kilowatt-hours.
 
-Supervised Or Unsupervised ML Approach?	Supervised
+peak_hours_usage: Energy usage during peak hours.
 
-Dataset Link	https://github.com/SayanDesarkar2001/Dataset-on-Energy.git
+off_peak_usage: Energy usage during off-peak hours.
 
-Number of Rows	10,000
-Number of Columns	15
-Target Variable (If supervised)	target_high_usage (True/False)
+renewable_energy_pct: Percentage of energy from renewable sources.
 
+billing_amount: Total billing amount.
 
-Introduction to the Dataset
-The Energy_dataset.csv contains data related to energy consumption and various 
-factors affecting it. The dataset includes the following columns:
-1. customer_id: Unique identifier for each customer.
-2. energy_consumption_kwh: Total energy consumption in kilowatt-hours.
-3. peak_hours_usage: Energy usage during peak hours.
-4. off_peak_usage: Energy usage during off-peak hours.
-5. renewable_energy_pct: Percentage of energy from renewable sources.
-6. billing_amount: Amount billed to the customer.
-7. household_size: Number of people in the household.
-8. temperature_avg: Average temperature in the region.
-9. smart_meter_installed: Whether a smart meter is installed.
-10.time_of_day_pricing: Whether time-of-day pricing is used.
-11. annual_energy_trend: Annual trend in energy consumption.
-12. solar_panel: Whether solar panels are installed.
-13.target_high_usage: Whether the customer is targeted for high usage
+household_size: Number of people in the household.
+
+temperature_avg: Average temperature.
+
+income_bracket: Income bracket of the household.
+
+smart_meter_installed: Whether a smart meter is installed.
+
+time_of_day_pricing: Whether time-of-day pricing is used.
+
+annual_energy_trend: Annual trend in energy consumption.
+
+solar_panel: Whether solar panels are installed.
+
+target_high_usage: Whether the household is targeted for high usage.
+
 
 
 
