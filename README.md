@@ -71,8 +71,7 @@ df['household_size'].value_counts().plot(kind='bar'): Shows the distribution of 
 
 These visualizations provide insights into the data's distribution, potential outliers (though outliers are removed before this), and relationships between variables. 
 
-markdown
-![alt text]("C:\Users\926406\Downloads\435962433-e56cc9ff-d96e-4d39-9c87-2fc3efd3aeee.png")
+
 
 
 
