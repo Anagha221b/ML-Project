@@ -42,11 +42,38 @@ The code starts by loading the energy dataset from a CSV file into a pandas Data
 2.	Outlier Removal (remove_outliers() function):
 
 A custom function remove_outliers is defined to identify and remove outliers from specified numerical columns using the Interquartile Range (IQR) method.
+
 For each specified column:
+
 The first quartile (Q1) and third quartile (Q3) are calculated.
+
 The IQR (Q3 - Q1) is computed.
+
 Lower and upper bounds are determined as Q1 - 1.5 * IQR and Q3 + 1.5 * IQR, respectively.
+
 Data points outside these bounds are filtered out, effectively removing the outliers.
+
+3.	Exploratory Data Analysis (EDA) and Visualization (matplotlib.pyplot, seaborn):
+
+The code includes several steps for visualizing the data to understand its characteristics:
+
+df.hist(): Generates histograms for all numerical features to visualize their distributions.
+
+sns.boxplot(): Creates box plots for numerical features to visually identify outliers and understand the spread of the data.
+
+sns.pairplot(): Displays pairwise relationships between numerical features, helping to identify potential correlations and patterns.
+
+sns.heatmap(): Generates a heatmap of the correlation matrix between numerical features, quantifying the linear relationships between them.
+
+df.groupby(...).plot(kind='bar'): Creates bar plots to visualize aggregated data based on categorical features like 'region' and 'income_bracket'. This helps in understanding the relationship between these categories and energy consumption or billing amount.
+
+df['household_size'].value_counts().plot(kind='bar'): Shows the distribution of household sizes.
+
+These visualizations provide insights into the data's distribution, potential outliers (though outliers are removed before this), and relationships between variables. 
+
+markdown
+![alt text]("C:\Users\926406\Downloads\435962433-e56cc9ff-d96e-4d39-9c87-2fc3efd3aeee.png")
+
 
 
 
