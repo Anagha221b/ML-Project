@@ -39,6 +39,15 @@ Operations performed on the dataset:
 
 The code starts by loading the energy dataset from a CSV file into a pandas DataFrame. This is the standard way to ingest tabular data in Python for data analysis and machine learning.
 
+2.	Outlier Removal (remove_outliers() function):
+
+A custom function remove_outliers is defined to identify and remove outliers from specified numerical columns using the Interquartile Range (IQR) method.
+For each specified column:
+The first quartile (Q1) and third quartile (Q3) are calculated.
+The IQR (Q3 - Q1) is computed.
+Lower and upper bounds are determined as Q1 - 1.5 * IQR and Q3 + 1.5 * IQR, respectively.
+Data points outside these bounds are filtered out, effectively removing the outliers.
+
 
 
 
