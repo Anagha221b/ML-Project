@@ -75,7 +75,7 @@ These visualizations provide insights into the data's distribution, potential ou
           <img width="769" alt="Screenshot 2025-04-22 131552" src="https://github.com/user-attachments/assets/dc65a432-a681-4686-ba4e-c9e001a1ee4b" />
 
 4.  Data Splitting (train_test_split()):
-5.  
+  
 The dataset is split into training and testing sets. The test_size=0.3 indicates that 30% of the data is reserved for testing, and random_state=42 ensures reproducibility of the split.
 
 The test set is further split into a validation set (for initial model evaluation as a proxy for tuning) and an unseen test set for the final evaluation of the trained pipelines.
