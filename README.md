@@ -74,6 +74,71 @@ These visualizations provide insights into the data's distribution, potential ou
 <img width="741" alt="image" src="https://github.com/user-attachments/assets/e56cc9ff-d96e-4d39-9c87-2fc3efd3aeee" />
           <img width="769" alt="Screenshot 2025-04-22 131552" src="https://github.com/user-attachments/assets/dc65a432-a681-4686-ba4e-c9e001a1ee4b" />
 
+4.  Data Splitting (train_test_split()):
+5.  
+The dataset is split into training and testing sets. The test_size=0.3 indicates that 30% of the data is reserved for testing, and random_state=42 ensures reproducibility of the split.
+
+The test set is further split into a validation set (for initial model evaluation as a proxy for tuning) and an unseen test set for the final evaluation of the trained pipelines.
+
+5.	Feature Scaling (StandardScaler()):
+   
+StandardScaler from sklearn.preprocessing is used to standardize the numerical features. This involves:
+
+Calculating the mean and standard deviation of each feature in the training set.
+
+Subtracting the mean and dividing by the standard deviation for each data point in the training, validation, and unseen test sets.
+
+Scaling is important for many machine learning algorithms as it prevents features with larger values from dominating those with smaller values and can help with the convergence of some models.
+
+6.	Initial Model Training and Evaluation (Linear Regression, Random Forest, Decision Tree):
+   
+Basic instances of LinearRegression, RandomForestRegressor, and DecisionTreeRegressor are initialized.
+
+Each model is trained on the scaled training data (X_train_scaled, y_train).
+
+Predictions are made on the scaled validation data (X_val_scaled).
+
+The performance of each model is evaluated using Mean Squared Error (mean_squared_error) and R-squared (r2_score). 
+
+<img width="707" alt="image" src="https://github.com/user-attachments/assets/252dfa12-3789-475c-9056-6f760121fa91" />
+
+
+7.	Hyperparameter Tuning with GridSearchCV() (for Random Forest and Decision Tree):
+   
+GridSearchCV is used to systematically search for the best combination of hyperparameters for the Random Forest and Decision Tree models.
+
+Pipeline Creation (Pipeline()): For both models, a Pipeline is created that first applies StandardScaler and then the respective regressor. This ensures that scaling is applied to the data during the cross-validation process within GridSearchCV.
+
+Parameter Grids (rf_param_grid, dt_param_grid): Dictionaries defining the hyperparameters and their possible values to be tested by GridSearchCV.
+
+Fitting GridSearchCV: The fit() method of GridSearchCV trains and evaluates the model for every combination of hyperparameters in the grid using cross-validation (here, cv=3).
+
+Best Model Extraction (best_estimator_): The best_estimator_ attribute of the fitted GridSearchCV object provides the model (pipeline in this case) with the best hyperparameters found. 
+
+<img width="693" alt="image" src="https://github.com/user-attachments/assets/35ff2c57-b54f-4c8b-9ce6-4a96e589f014" />
+
+8.	Evaluation of Tuned Models on Unseen Data:
+   
+The best_pipeline (the tuned model within the pipeline, including the scaler) for both Random Forest and Decision Tree is used to make predictions on the scaled unseen test data (X_unseen_scaled).
+
+The performance on this truly held-out data is evaluated using MSE and R-squared to estimate the model's generalization ability. 
+<img width="689" alt="image" src="https://github.com/user-attachments/assets/47306bd3-07a2-442c-8916-dca2f19c629e" />
+
+
+9.	Model Saving (joblib.dump()):
+    
+The joblib library is used to save the trained best_pipeline for both Random Forest and Decision Tree to disk. This allows you to load and reuse the trained models later without retraining.
+
+10.	Loading and Evaluating Saved Models (for verification):
+    
+The code demonstrates how to load the saved pipelines using joblib.load().
+The loaded pipelines are then used to make predictions on the unseen data, and the performance is evaluated again to ensure consistency.
+
+
+
+
+
+
 
 
 
