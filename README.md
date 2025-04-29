@@ -115,14 +115,12 @@ Fitting GridSearchCV: The fit() method of GridSearchCV trains and evaluates the 
 
 Best Model Extraction (best_estimator_): The best_estimator_ attribute of the fitted GridSearchCV object provides the model (pipeline in this case) with the best hyperparameters found. 
 
-<img width="693" alt="image" src="https://github.com/user-attachments/assets/35ff2c57-b54f-4c8b-9ce6-4a96e589f014" />
-
 8.	Evaluation of Tuned Models on Unseen Data:
    
 The best_pipeline (the tuned model within the pipeline, including the scaler) for both Random Forest and Decision Tree is used to make predictions on the scaled unseen test data (X_unseen_scaled).
 
 The performance on this truly held-out data is evaluated using MSE and R-squared to estimate the model's generalization ability. 
-<img width="689" alt="image" src="https://github.com/user-attachments/assets/47306bd3-07a2-442c-8916-dca2f19c629e" />
+
 
 
 9.	Model Saving (joblib.dump()):
